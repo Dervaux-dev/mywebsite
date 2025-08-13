@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INEZA YVES DELVO </title>
+    <style>
+        li{
+            display: flex;
+            flex-direction: row;
+        }
+        #home{
+            width: 40px;
+            height: 40px;
+            margin-bottom: -0.1em;
+            margin-left: 1em;
+
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        ul {
+            text-align: center;
+            margin-top: 20px;
+               display: flex;
+            align-items: center;
+            flex-direction: row;
+            padding: -2px;
+            margin-left: 15em;
+            font-size: 35px;
+        }
+        #aboutme {
+            width: 40px;
+            height: 40px;
+        }
+        #Projects {
+            width: 40px;
+            height: 40px;
+        }
+        #Contact {
+            width: 40px;
+            height: 40px;
+        }
+        .header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #dee2e6;
+            position: relative;
+        }
+        #pp{
+            position: absolute;
+            margin-left: -6em;
+            color: #007BFF;
+        }
+         #pp:hover{
+            text-decoration: underline;
+            background-color: #3e3a3a;
+              cursor: pointer; 
+         }
+         li:hover {
+            background-color: #3e3a3a;
+            cursor: pointer;   
+            }
+            #pp:active {
+            background-color: #3e3a3a;
+            color: #fff;
+            text-decoration: underline;
+            cursor: pointer;
+            }
+            #start {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .first{
+            width: 300px;
+            height: 150px;
+            border-radius: 15px;
+              border: 2px solid #000;
+        }
+        .first::before {
+            content: "";
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 40px solid #333;
+        }
+        .social{
+            margin-left: 0em;
+            width: 800px;
+           height: 300px;
+           border-radius: 9px;
+             background-color: #333;
+           color: #fff; 
+        }
+        .full{
+            width: 800px;
+            height: 300px;
+            background-color: #333;
+            border-radius: 9px;
+            color: #fff;
+            margin-left: 53em;
+            margin-top: -19.6em;
+        }
+        .ui{
+            width: 800px;
+            height: 300px;
+              background-color: #333;
+            color: #fff;
+            border-radius: 8px;
+        }
+        .wifi{
+             width: 800px;
+            height: 300px;
+              background-color: #333;
+            color: #fff;
+            border-radius: 8px;
+            margin-left: 53em;
+            margin-top: -19.5em;
+        }
+        section:hover{
+            background-color: rgb(93, 93, 3);
+              transform: scale(1.02);
+        }
+        nav a.active {
+    background: #ff6600;
+    border-radius: 4px;
+}
+h3{
+    margin-left: 12.5em;
+    color: skyblue;
+    font-size: 25px;
+    text-decoration: underline;
+}
+.sections{
+    background-color: #3e3a3a;
+    border-radius: 8px;
+}
+.main{
+      background-color: #333;
+    border-radius: 8px;
+}
+.mobile{
+            width: 800px;
+            height: 300px;
+              background-color: #333;
+            color: #fff;
+            border-radius: 8px;  
+}
+.multi{
+            width: 800px;
+            height: 300px;
+              background-color: #333;
+            color: #fff;
+            border-radius: 8px;  
+            margin-left: 53em;
+            margin-top: -20.3em;
+}
+  .sensors{
+            width: 600px;
+            height: 250px;
+              background-color: #333;
+            color: #fff;
+            border-radius: 8px;  
+            margin-left: 35em;
+  }  
+  #hire{
+    margin-left: 55em;
+    border-radius: 8px;
+    background-color: #333;
+    width: 300px;
+    height: 300px;
+  }
+  #mybutton{
+    width: 100px;
+    height: 75px;
+    border-radius: 15px;
+    background-color: #333;
+    color: #fff;
+  }
+  footer {
+    background-color: #222;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 22px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #1da1f2; /* color izahinduka igihe bayikandaho */
+}
+.header{
+    background-color: #333;
+    border-radius: 8px;
+}
+a{
+    color: #fff;
+}
+@media screen and (max-width: 1200px) {
+    .main,
+    .first,
+    .social,
+    .full,
+    .ui,
+    .wifi,
+    .mobile,
+    .multi,
+    .sensors {
+        width: 95vw !important;
+        margin-left: 0 !important;
+        margin-top: 1em !important;
+        height: auto !important;
+    }
+    ul {
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 28px;
+    }
+    #hire {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .main,
+    .first,
+    .social,
+    .full,
+    .ui,
+    .wifi,
+    .mobile,
+    .multi,
+    .sensors {
+        width: 98vw !important;
+        margin-left: 0 !important;
+        margin-top: 1em !important;
+        padding: 1em;
+        font-size: 1em;
+        height: auto !important;
+    }
+    ul {
+        margin-left: 0;
+        padding: 5px;
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    #hire {
+        margin-left: 0;
+        width: 90vw;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main,
+    .first,
+    .social,
+    .full,
+    .ui,
+    .wifi,
+    .mobile,
+    .multi,
+    .sensors {
+        width: 100vw !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        padding: 0.5em;
+        font-size: 0.9em;
+        height: auto !important;
+    }
+    ul {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        padding: 0;
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+    #hire {
+        margin-left: 0;
+        width: 100vw;
+        height: auto;
+    }
+    footer {
+        font-size: 0.9em;
+        padding: 10px 0 8px 0;
+    }
+    .footer-container {
+        padding: 0 5px;
+        font-size: 0.9em;
+    }
+    .social-icons a img {
+        width: 30px;
+        height: 30px;
+    }
+}
+    </style>
+</head>
+<body>
+       <div class="home">
+      
+    </div>
+   <div class="header">
+ 
+         <h1>Welcome to My Portfolio</h1>
+         <nav>
+              <ul>
+              <li><a href="#home" class="active">home</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+                <li><a href="about.html">About Me</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <li> <a href="experience.html">experience</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="contact.html">Contact</a></li>&nbsp;&nbsp;&nbsp;
+              </ul>
+   </div> 
+   <div class="main">
+    <img src="WIN_20250807_13_09_45_Pro.jpg" alt="myphoto" style="width: 200px; height: 200px; display: block; margin: 0 auto;  border-radius: 50%;">
+    <p id="start">I'M Mr INEZA YVES DELVO </p>
+    <a href="hire me.html"  id="hire"><button id="mybutton"> Request Service</button></a>
+   </div>
+   <div class="sections">
+   <section class="ui">
+    <h3>UI/UX Designer</h3>
+    <p>Hello! <br> I'm a passionate UI/UX Designer dedicated to creating intuitive and engaging digital experiences. <br> With a keen eye for detail and a user-centered approach, <br> I craft designs that not only look great but also provide seamless usability. <br> My expertise spans wireframing, prototyping, visual design, and user research, <br> ensuring that every project I undertake is tailored to meet user needs and business goals. <br> Let's work together to bring innovative ideas to life through thoughtful design</p>
+   </section>
+   <section class="full">
+    <h3>Full-Stack Developer</h3>
+    <p>Hi!  <br>I'm a versatile Full-Stack Developer with a passion for building dynamic and scalable web applications. <br> With expertise in both front-end and back-end development,  <br>I enjoy transforming ideas into functional, user-friendly digital solutions. <br> Skilled in technologies such as HTML, CSS, JavaScript, React, Node.js, Python,and databases like MySQL and MongoDB, <br> I am committed to delivering high-quality code and innovative features. <br> Whether working on new projects or improving existing systems, <br> I focus on performance, security, and user experience. <br> Let's collaborate to create impactful and efficient software that meets your needs.</p>
+
+   </section>
+   <section class="social">
+    <h3>Social Media Manager</h3>
+    <p>Hi! <br> I create, manage, and monetize social media accounts for individuals and businesses. <br> I help grow followers, produce engaging content, and set up ways to earn money through ads, sponsored posts, <br> and other revenue streams on platforms like YouTube, Instagram, TikTok, and Facebook.</p>
+<dl>
+    <dd>Setting up professional social media profiles</dd>
+    <dd>Developing content strategies to attract followers</dd>
+    <dd>Monetizing accounts through ads and partnerships</dd>
+    <dd>Growing followers and engagement</dd>
+    <dd>Analyzing performance to increase earnings</dd>
+</dl>
+   </section>
+   <section class="wifi">
+    <h3>WIFI(Router) Setup/configure</h3>
+    <p>
+I showcase my expertise in Wi-Fi setup and network configuration. <br> I have experience in designing, installing, and troubleshooting wireless networks <br> to ensure reliable and secure internet connectivity for various clients and environments."  
+    </p>
+   </section>
+   <section class="mobile">
+    <h3>Mobile Application Developer</h3>
+    <p>I'm specialized in developing good performance mobile <br>
+    application that meets user experience using modern <br>
+tools like flutter and other powerful tools for <br>
+both Android and Ios's phone(Iphone)</p>
+   </section>
+   <section class="multi">
+    <h3>Multi_Media Jobs </h3>
+    <p>I'm specialized in capturing images,videos,and other. <br>
+        and I'm expert in editing videos,images,and animate anything <br>
+        using powerful tools like modern adobe tools, etc.
+    </p>
+   </section>
+   <section class="sensors">
+    <h3>Installing&Configuring Sensors</h3>
+    <p>I'm good choice you can choose because I use <br>
+        modern tools for configuring sensors <br>
+        because I'M excellent in coding Arduino code <br>
+        for configuring any sensor you want <br><br>
+        and I'm good for using simulation software like <br>
+        prothias, and other ..........................
+    </p>
+   </section>
+   </div><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer>
+    <div class="footer-container">
+        <p>© 2025 Ineza Yves Delvo | All Rights Reserved</p>
+        <p>Follow me on</p>
+        <div class="social-icons">
+            <a href="https://github.com/Dervaux-dev" target="_blank"> <img src="github.png" alt=" github" width="40px" height="40px"></a>
+            <a href="https://instagram.com/inezadelvo" target="_blank"><img src="instagram.png" alt="instagram" width="40px" height="40px"></a>
+            <a href="https://linkedin.com/in/USERNAME" target="_blank"> <img src="linkedin.png" alt="linked in" width="40px" height="40px"></a>
+            <a href="https://tiktok.com/delvo_t1" target="_blank"> <img src="tik-tok.png" alt="tiktok" height="40px" width="40px"></a>
+        </div>
+    </div>
+
+   </footer>
+    <script src="script.js"></script>
+</body>
+</html>

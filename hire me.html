@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Request Form</title>
+    <style>
+        
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .checkbox-group input {
+            margin-right: 8px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            width: 100%;
+            background: #4CAF50;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        footer {
+            background-color: #222;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 20px 0 10px 0;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            z-index: 10;
+            margin-top: 3em;
+        }
+        .footer-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .social-icons {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .social-icons a img {
+            border-radius: 50%;
+            background: #444;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .social-icons a img:hover {
+            transform: scale(1.1);
+            background: #ff6600;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Request a Service</h2>
+
+    <form id="serviceForm">
+        <label>Your Name:</label>
+        <input type="text" name="name" required>
+
+        <label> Your Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Choose any service you want:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="services" value="Mobile App Development"> Mobile App Development</label>
+            <label><input type="checkbox" name="services" value="Website Development"> Website Development</label>
+            <label><input type="checkbox" name="services" value="UI/UX Design"> UI/UX Design</label>
+            <label><input type="checkbox" name="services" value="Social Media Creation"> Social Media Creation</label>
+            <label><input type="checkbox" name="services" value="WiFi Installation"> WiFi Installation</label>
+            <label><input type="checkbox" name="services" value="Installing Sensors"> Installing Sensors</label>
+            <label><input type="checkbox" name="services" value="Multimedia Jobs"> Multimedia Jobs</label>
+            <label><input type="checkbox" name="services" value="Other Related"> Other Related</label>
+        </div>
+
+        <label>Your message:</label>
+        <textarea name="message" rows="5" placeholder="add some about what you have choosed"></textarea>
+
+        <button type="submit">SEND</button>
+    </form>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        emailjs.init("BOi7TpRFwRClMePik"); // Shyiramo Public Key yawe hano
+
+        document.getElementById('serviceForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Fata services zose zahiswemo
+            let selectedServices = Array.from(document.querySelectorAll('input[name="services"]:checked'))
+                                        .map(cb => cb.value)
+                                        .join(', ');
+
+            let templateParams = {
+                name: this.name.value,
+                email: this.email.value,
+                services: selectedServices,
+                message: this.message.value,
+                to_email: "inezadervaux@gmail.com"
+            };
+
+            emailjs.send("service_i2kyir2", "template_dz300om", templateParams)
+                .then(function() {
+                    alert("Message have been sent!");
+                    document.getElementById('serviceForm').reset();
+                }, function(error) {
+                    alert("Connect to internet and try again: " + JSON.stringify(error));
+                });
+        });
+    </script>
+<button onclick="openNew()">back</button>
+<script>
+    function openNew() {
+        window.location.href = "home.html";
+    } 
+</script> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer>
+    <div class="footer-container">
+        <p>© 2025 Ineza Yves Delvo | All Rights Reserved</p>
+        <p>Follow me on</p>
+        <div class="social-icons">
+            <a href="https://github.com/Dervaux-dev" target="_blank"> <img src="github.png" alt=" github" width="40px" height="40px"></a>
+            <a href="https://instagram.com/inezadelvo" target="_blank"><img src="instagram.png" alt="instagram" width="40px" height="40px"></a>
+            <a href="https://linkedin.com/in/USERNAME" target="_blank"> <img src="linkedin.png" alt="linked in" width="40px" height="40px"></a>
+            <a href="https://tiktok.com/delvo_t1" target="_blank"> <img src="tik-tok.png" alt="tiktok" height="40px" width="40px"></a>
+        </div>
+    </div>
+
+   </footer>
+</body>
+</html>

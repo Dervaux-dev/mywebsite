@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More About Me</title>
+    <style>
+                     nav a.active {
+    background: #ff6600;
+    border-radius: 4px;
+}
+a{
+    font-size: 30px;
+    text-decoration: none;
+    color: #f4f4f4;
+}
+    ul{
+            display: flex;
+            flex-direction: row;
+            text-decoration: none;
+            margin-left: 40em;
+            padding: 10px;
+        }
+        body{
+    background-color: #333;
+}
+.achievements{
+    align-items: center;
+    color: #f4f4f4;
+    width: 800px;
+    height: 600px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: black;
+    margin-top: 9em;
+    margin-left: 28em;
+    position: relative;
+  overflow: hidden;
+}
+dt{
+    font-size: 40px;
+    color: rgb(123, 123, 230);
+}
+dd{
+    font-size: 25px;
+}
+.achievements::before
+     {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: -100%; /* gutangira ku mpande z'ibumoso */
+  width: 200%; /* kugira ngo urumuri rureke kwambuka */
+  height: 100%;
+  background: linear-gradient(
+    45deg, /* umurongo ugoramye */
+    transparent,
+    rgb(141, 189, 222),
+    transparent
+  );
+  animation: moveDiagonal 5s linear infinite;
+}
+
+/* Animation yo kwimuka kwa blue */
+@keyframes moveDiagonal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+footer {
+    background-color: #333;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #222;
+}
+ #response {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-height: 50px;
+    visibility: hidden;
+  }
+   #questionInput {
+        width: 300px;
+        padding: 8px;
+        border-radius: 8px;
+        background-color: #000;
+        color: #fff;
+        border: 1px solid #444;
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+    .ask-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2em;
+    }
+      .ask-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    #askButton, #refreshButton {
+        padding: 8px 16px;
+        border-radius: 8px;
+        border: none;
+        background: #ff6600;
+        color: #fff;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    #askButton:hover, #refreshButton:hover {
+        background: #e65c00;
+    }
+    p a{
+      font-size: 15px;
+    }
+    a:hover{
+      background-color: #444;
+    }
+    @media screen and (max-width: 1200px) {
+  .achievements {
+    width: 90vw;
+    margin-left: 2vw;
+    margin-top: 4em;
+    height: auto;
+  }
+  ul {
+    margin-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .achievements {
+    width: 98vw;
+    margin-left: 0;
+    margin-top: 2em;
+    padding: 1em;
+    font-size: 1em;
+  }
+  ul {
+    margin-left: 0;
+    padding: 5px;
+    font-size: 20px;
+  }
+  dt {
+    font-size: 28px;
+  }
+  dd {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .achievements {
+    width: 100vw;
+    margin: 0;
+    border-radius: 0;
+    padding: 0.5em;
+    font-size: 0.9em;
+    height: auto;
+  }
+  ul {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+  .ask-container {
+    margin-top: 1em;
+    padding: 0 5px;
+  }
+  #questionInput {
+    width: 90vw;
+    font-size: 1em;
+  }
+  .ask-buttons {
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+  }
+  #askButton, #refreshButton {
+    width: 100%;
+    font-size: 1em;
+  }
+  footer {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+  .social-icons a img {
+    width: 30px;
+    height: 30px;
+  }
+}
+    </style>
+</head>
+<body>
+      <div class="header">
+         <nav>
+              <ul>
+              <li><a href="home.html">home</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+                <li><a href="about.html" class="active">About Me</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <li> <a href="experience.html">experience</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="contact.html">Contact</a></li>&nbsp;&nbsp;&nbsp;
+              </ul>
+   </div> 
+   <section class="achievements">
+    <h1>ACHIEVEMENTS</h1>
+    <p>I created two companies that offer many services like <br>
+    <dl>
+        <dt><b>Digital Arts</b></dt>
+        <dd>This is my company that offer software,application for both phones and pc development <br>
+        and some times develop games</dd>
+    </dl> <br>
+<dl><dt>EjobAssistRW</dt>
+<dd>This is my company that help everybody who wants some job for many non_governmental organization, <br>
+anybody who wants good resume that help him/her to use it when he/she want to apply to any job and, <br>
+help anybody who wants monetized social media's accounts inorder to get paid by them. </dd></dl></p>
+   </section>
+   <div class="ask-container">
+      <input type="text" id="questionInput" placeholder="Ask Delvo AI..." /> <br>
+      <p>Delvo AI may make mistake, be sure when your asking <a href="privacy.html">privacy|information to ask</a></p>
+      <div class="ask-buttons">
+        <button id="askButton">Ask</button>
+        <button id="refreshButton">Refresh Chat</button>
+      </div>
+      <div id="response"></div>
+   </div>
+   <footer>
+    <div class="footer-container">
+        <p>© 2025 Ineza Yves Delvo | All Rights Reserved</p>
+        <p>Follow me on</p>
+        <div class="social-icons">
+            <a href="https://github.com/Dervaux-dev" target="_blank"> <img src="github.png" alt=" github" width="40px" height="40px"></a>
+            <a href="https://instagram.com/inezadelvo" target="_blank"><img src="instagram.png" alt="instagram" width="40px" height="40px"></a>
+            <a href="https://linkedin.com/in/USERNAME" target="_blank"> <img src="linkedin.png" alt="linked in" width="40px" height="40px"></a>
+            <a href="https://tiktok.com/delvo_t1" target="_blank"> <img src="tik-tok.png" alt="tiktok" height="40px" width="40px"></a>
+        </div>
+    </div>
+
+   </footer>
+   <script src="script.js"></script>
+   <script>
+  // Simple knowledge base for Delvo AI
+  const knowledgeBase = {
+    "hello": "Hello! I'm here to help you. What do you want to know?",
+    "who are you": "I'm Delvo AI, your assistant. Ask me anything!",
+    "digital arts": "Digital Arts is my company offering software and game development services.",
+    "ejobassistrw": "EjobAssistRW helps people find jobs, build resumes, and monetize social media accounts.",
+    "contact": "You can contact me via the Contact page or social media links in the footer.",
+    "achievements": "I have created two companies: Digital Arts and EjobAssistRW.",
+    "help": "I'm here to help you. Tell me what you want to know.",
+    "izacu": "I participated in the deployment of Izacu Web Application.",
+    "hey u app": "I contributed to the launch and deployment of Hey U App.",
+    "hobbies/what do you like": "I enjoy coding, learning new technologies, and helping others with their projects.",
+    "who created you": "I created by Delvo developer.",
+    "which thing you prefer to do when you are rest": "Playing video games and doing some sports.",
+    "which food do you like": "Anything the same.",
+    "i want you to be my boyfriend": "Yes you can.",
+    "i want you to build any system": "Yes, you can request service on request service button on home page.",
+    "where do you live": "I live in RWANDA, Southern province, Huye district."
+  };
+
+  // Load chat history from localStorage
+  function loadChatHistory() {
+    return JSON.parse(localStorage.getItem('delvo_ai_chat')) || [];
+  }
+
+  // Save chat history to localStorage
+  function saveChatHistory(history) {
+    localStorage.setItem('delvo_ai_chat', JSON.stringify(history));
+  }
+
+  // Display chat flow
+  function displayChat(history) {
+    const responseDiv = document.getElementById('response');
+    responseDiv.innerHTML = '';
+    responseDiv.style.visibility = history.length ? 'visible' : 'hidden';
+    history.forEach(item => {
+      const userMsg = document.createElement('div');
+      userMsg.style.color = '#ff6600';
+      userMsg.textContent = "You: " + item.question;
+      responseDiv.appendChild(userMsg);
+
+      const aiMsg = document.createElement('div');
+      aiMsg.style.color = '#fff';
+      aiMsg.textContent = "Delvo AI: " + item.answer;
+      responseDiv.appendChild(aiMsg);
+    });
+  }
+
+  // Find answer from knowledge base
+  function getAnswer(question) {
+    const q = question.trim().toLowerCase();
+    for (const key in knowledgeBase) {
+      if (q.includes(key)) return knowledgeBase[key];
+    }
+    return "I'm here to help you, but I don't have information about that yet. Tell me other thing you want!";
+  }
+
+  // Initial chat flowchart message
+  function initialMessage() {
+    return { question: "hello", answer: knowledgeBase["hello"] };
+  }
+
+  // Event listeners
+  document.addEventListener('DOMContentLoaded', () => {
+    const askButton = document.getElementById('askButton');
+    const refreshButton = document.getElementById('refreshButton');
+    const questionInput = document.getElementById('questionInput');
+    const responseDiv = document.getElementById('response');
+
+    let chatHistory = loadChatHistory();
+    if (chatHistory.length === 0) {
+      chatHistory.push(initialMessage());
+      saveChatHistory(chatHistory);
+    }
+    displayChat(chatHistory);
+
+    askButton.addEventListener('click', () => {
+      const question = questionInput.value.trim();
+      if (!question) {
+        alert("Please enter your question.");
+        return;
+      }
+      const answer = getAnswer(question);
+      chatHistory.push({ question, answer });
+      saveChatHistory(chatHistory);
+      displayChat(chatHistory);
+      questionInput.value = '';
+    });
+
+    refreshButton.addEventListener('click', () => {
+      chatHistory = [initialMessage()];
+      saveChatHistory(chatHistory);
+      displayChat(chatHistory);
+      questionInput.value = '';
+    });
+
+    questionInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') askButton.click();
+    });
+  });
+</script>
+</body>
+</html>
